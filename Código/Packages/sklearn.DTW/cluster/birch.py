@@ -1154,28 +1154,28 @@ def dtw_distances(X, Y=None, Y_norm_squared=None, squared=False,
     s = X.shape
     sB = Y.shape
     if len(s) != 2:
-        raise ValueError('XA must be a 2-dimensional array.')
+        raise ValueError("XA must be a 2-dimensional array.")
     if len(sB) != 2:
-        raise ValueError('XB must be a 2-dimensional array.')
+        raise ValueError("XB must be a 2-dimensional array.")
     if s[1] != sB[1]:
-        raise ValueError('XA and XB must have the same number of columns '
-                         '(i.e. feature dimension.)',s, sB)
+        raise ValueError("XA and XB must have the same number of columns "
+                         "(i.e. feature dimension.)",s, sB)
 
     mA = s[0]
     mB = sB[0]
     
     XA = []
-    for item in X:
+    for itemsx in X:
         XB = []
-        for item2 in item:
-            XB.append(item2)
+        for itemx in itemsx:
+            XB.append(itemx)
         XA.append(XB)
         
     YA = []
-    for item3 in Y:
+    for itemsy in Y:
         YB = []
-        for item4 in item3:
-            YB.append(item4)
+        for itemy in itemsy:
+            YB.append(itemy)
         YA.append(YB)
         
     dm = []    
